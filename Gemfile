@@ -71,3 +71,7 @@ group :test do
   gem "selenium-webdriver"
 
 end
+
+gem 'jquery-rails'
+gem 'jquery-ui-rails'
+gem "sassc-rails"
