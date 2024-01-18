@@ -1,0 +1,14 @@
+.invitation-form {
+  //@extend .d-flex;
+  //@extend .justify-content-center;
+
+  padding: 32px 24px;
+
+  &__header {
+    margin-bottom: 24px;
+  }
+
+  &__footer {
+    margin-top: 48px;
+  }
+}
