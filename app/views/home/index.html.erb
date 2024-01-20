@@ -1,7 +1,7 @@
 <!-- Navbar Start -->
 <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-lg-5">
   <%= link_to root_path, class: 'navbar-brand d-block d-lg-none' do %>
-    <h1 class="font-secondary text-white mb-n2">Jack <span class="text-primary">&</span> Rose</h1>
+    <h1 class="font-secondary text-white mb-n2">Michal <span class="text-primary">&</span> Sisa</h1>
   <% end %>
   <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
     <span class="navbar-toggler-icon"></span>
@@ -14,7 +14,7 @@
       <a href="#gallery" class="nav-item nav-link">Gallery</a>
     </div>
     <%= link_to root_path, class: 'navbar-brand mx-5 d-none d-lg-block' do %>
-      <h1 class="font-secondary text-white mb-n2">Jack <span class="text-primary">&</span> Rose</h1>
+      <h1 class="font-secondary text-white mb-n2">Michal <span class="text-primary">&</span> Sisa</h1>
     <% end %>
     <div class="navbar-nav mr-auto py-0">
       <a href="#family" class="nav-item nav-link">Family</a>
@@ -35,9 +35,9 @@
         <%= image_tag 'carousel-1.jpg', class: 'position-absolute w-100 h-100', style: 'object-fit: cover;' %>
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
           <div class="p-3" style="max-width: 900px;">
-            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Jack & Rose</h1>
+            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Michal & Sisa</h1>
             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-              <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
+              <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Ideme sa brať!</h3>
             </div>
 <!--            <button type="button" class="btn-play mx-auto" data-toggle="modal"-->
 <!--                    data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">-->
@@ -50,9 +50,9 @@
         <%= image_tag 'carousel-2.jpg', class: 'position-absolute w-100 h-100', style: 'object-fit: cover;' %>
         <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
           <div class="p-3" style="max-width: 900px;">
-            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Jack & Rose</h1>
+            <h1 class="display-1 font-secondary text-white mt-n3 mb-md-4">Michal & Sisa</h1>
             <div class="d-inline-block border-top border-bottom border-light py-3 px-4">
-              <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">We're getting married</h3>
+              <h3 class="text-uppercase font-weight-normal text-white m-0" style="letter-spacing: 2px;">Ideme sa brať!</h3>
             </div>
 <!--            <button type="button" class="btn-play mx-auto" data-toggle="modal"-->
 <!--                    data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">-->
@@ -109,7 +109,7 @@
         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
           <h3 class="mb-3">The Groom</h3>
           <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-          <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Jack</h3>
+          <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-male text-primary pr-3"></i>Michal</h3>
           <div class="position-relative">
             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-twitter"></i></a>
             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -130,7 +130,7 @@
         <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-5">
           <h3 class="mb-3">The Bride</h3>
           <p>Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-          <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Rose</h3>
+          <h3 class="font-secondary font-weight-normal text-muted mb-3"><i class="fa fa-female text-primary pr-3"></i>Sisa</h3>
           <div class="position-relative">
             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-instagram"></i></a>
             <a class="btn btn-outline-primary btn-square mr-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -289,6 +289,54 @@
       </div>
     </div>
   </div>
+
+
+
+
+  <div class="container py-5">
+    <div class="section-title position-relative text-center">
+<!--      <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Event</h6>-->
+      <h2 class="font-secondary display-4">Hostia</h2>
+      <i class="far fa-heart text-dark"></i>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6 text-center">
+        <h5 class="font-weight-normal text-muted mb-3 pb-3">
+          V tejto chvíli máme pozvaných <%= @invitations.count %> hostí.
+        </h5>
+      </div>
+    </div>
+    <div class="row">
+      <% @invitations.each.with_index do |inv, inv_idx| %>
+        <%= home_invitation_col_element(inv_idx + 1) do %>
+          <h4 class="mb-3"><%= inv.name %></h4>
+          <p class="mb-2"><%= inv.accepted? ? 'príde' : 'čakáme odpoveď' %></p>
+<!--          <p class="mb-0">12:00AM - 13:00PM</p>-->
+        <% end %>
+
+
+<!--        <div class="col-md-6 border-right border-primary">-->
+<!--          <div class="text-center text-md-right mr-md-3 mb-4 mb-md-0">-->
+
+<!--            <h4 class="mb-3">The Reception</h4>-->
+<!--            <p class="mb-2">123 Street, New York, USA</p>-->
+<!--            <p class="mb-0">12:00AM - 13:00PM</p>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--        <div class="col-md-6">-->
+<!--          <div class="text-center text-md-left ml-md-3">-->
+
+<!--            <h4 class="mb-3">Wedding Party</h4>-->
+<!--            <p class="mb-2">123 Street, New York, USA</p>-->
+<!--            <p class="mb-0">12:00AM - 13:00PM</p>-->
+<!--          </div>-->
+<!--        </div>-->
+      <% end %>
+    </div>
+  </div>
+
+
+
 </div>
 <!-- Event End -->
 
@@ -477,7 +525,20 @@
       <span class="px-3">|</span>
       <p class="text-white" href="#">+012 345 6789</p>
     </div>
-    <p class="m-0">&copy; <a class="text-primary" href="#">Domain Name</a>. Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+    <% if user_signed_in? %>
+      <%= link_to 'Odhlásiť', destroy_user_session_path, data: { turbo_method: :delete } %>
+    <% else %>
+      <%= form_for(:user, :url => session_path(:user)) do |f| %>
+        <%= f.text_field :email %>
+        <%= f.password_field :password %>
+        <%= f.check_box :remember_me, class: 'd-none', checked: true %>
+        <%#= f.label :remember_me %>
+        <%= f.submit 'Sign in' %>
+        <%#= link_to "Forgot your password?", new_password_path(:user) %>
+      <% end %>
+    <% end %>
+    <p class="m-0">
+      &copy; <a class="text-primary" href="#">Domain Name</a>. Designed by <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
     </p>
   </div>
 </div>

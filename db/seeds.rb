@@ -13,10 +13,10 @@ end
 
 puts 'Creating invitations...'
 if Invitation.none?
-  Invitation.create!(name: 'Roger Federer')
+  Invitation.create!(name: 'Roger Federer', accepted: true)
   Invitation.create!(name: 'Grigor Dimitrov')
   Invitation.create!(name: 'Maria Sharapova')
-  Invitation.create!(name: 'Anna Kalinskaya')
+  Invitation.create!(name: 'Anna Kalinskaya', accepted: true, overnight: true)
 end
 
 puts "\nDone.\n\n"
