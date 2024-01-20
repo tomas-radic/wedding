@@ -1,7 +1,4 @@
 .invitation-form {
-  //@extend .d-flex;
-  //@extend .justify-content-center;
-
   padding: 32px 24px;
 
   &__header {
@@ -11,4 +8,11 @@
   &__footer {
     margin-top: 48px;
   }
+}
+
+.manager-invitation {
+  margin-top: 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
 }

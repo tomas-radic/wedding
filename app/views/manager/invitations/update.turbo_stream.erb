@@ -1,0 +1,3 @@
+<%= turbo_stream.update dom_id(@invitation) do %>
+  <%= render 'manager/invitations/invitation', invitation: @invitation %>
+<% end %>

@@ -526,6 +526,7 @@
       <p class="text-white" href="#">+012 345 6789</p>
     </div>
     <% if user_signed_in? %>
+      <%= link_to 'Pozvánky', manager_invitations_path %> |
       <%= link_to 'Odhlásiť', destroy_user_session_path, data: { turbo_method: :delete } %>
     <% else %>
       <%= form_for(:user, :url => session_path(:user)) do |f| %>
