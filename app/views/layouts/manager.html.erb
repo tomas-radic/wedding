@@ -6,12 +6,12 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "manager.css", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
-  <body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <%= render 'shared/navbar' %>
+  <body>
+    <%= render 'manager/shared/navbar' %>
     <%= yield %>
     <%= render 'shared/footer' %>
   </body>

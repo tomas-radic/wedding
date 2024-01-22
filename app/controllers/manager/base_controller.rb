@@ -1,4 +1,6 @@
 class Manager::BaseController < ApplicationController
+  layout 'manager'
+
   before_action :authenticate_user!
   before_action :verify_manager!
 

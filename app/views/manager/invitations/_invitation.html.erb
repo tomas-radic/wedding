@@ -3,18 +3,18 @@
     <div class="display-4 mb-2"><%= invitation.name %></div>
     <%= form_with model: [:manager, invitation] do |f| %>
       <div class="form-group">
-        <%= f.label :name, 'Meno na pozvánke' %>
-        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :name, 'Meno na pozvánke', for: "invitation-name-#{invitation.id}" %>
+        <%= f.text_field :name, id: "invitation-name-#{invitation.id}", class: 'form-control' %>
       </div>
       <div class="d-flex justify-content-between">
         <div>
           <span class="mr-2">
-            <%= f.check_box :accepted %>
-            <%= f.label :accepted, 'Príde' %>
+            <%= f.check_box :accepted, id: "invitation-accepted-#{invitation.id}" %>
+            <%= f.label :accepted, 'Príde', for: "invitation-accepted-#{invitation.id}" %>
           </span>
           <span class="mr-2">
-            <%= f.check_box :overnight %>
-            <%= f.label :overnight, 'Prespí' %>
+            <%= f.check_box :overnight, id: "invitation-overnight-#{invitation.id}" %>
+            <%= f.label :overnight, 'Prespí', for: "invitation-overnight-#{invitation.id}" %>
           </span>
         </div>
         <div>
