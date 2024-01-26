@@ -1,0 +1,7 @@
+<% if order.even? %>
+  <%= render 'home/story_image', path: path, align: 'right' %>
+  <%= render 'home/story_text', align: 'left', heading: heading, date: date, text: text %>
+<% else %>
+  <%= render 'home/story_text', align: 'right', heading: heading, date: date, text: text %>
+  <%= render 'home/story_image', path: path, align: 'left' %>
+<% end %>

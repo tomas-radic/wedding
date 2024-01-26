@@ -1,59 +1,39 @@
 <div class="container-fluid py-5" id="story">
   <div class="container pt-5 pb-3">
     <div class="section-title position-relative text-center">
-      <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Story</h6>
-      <h1 class="font-secondary display-4">Our Love Story</h1>
+      <h6 class="text-uppercase text-primary mb-3" style="letter-spacing: 3px;">Príbeh</h6>
+      <h1 class="font-secondary display-4">Náš spoločný čas</h1>
       <i class="far fa-heart text-dark"></i>
     </div>
     <div class="container timeline position-relative p-0">
-      <div class="row">
-        <div class="col-md-6 text-center text-md-right">
-          <%= image_tag 'story-1.jpg', class: 'img-fluid mr-md-3' %>
+      <% 8.times do |i| %>
+        <div class="row">
+          <%= render 'home/story_row',
+                     order: i,
+                     path: "section3/#{i + 1}.jpg",
+                     heading: '',
+                     date: '',
+                     text: '' %>
         </div>
-        <div class="col-md-6 text-center text-md-left">
-          <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-            <h4 class="mb-2">First Meet</h4>
-            <p class="text-uppercase mb-2">01 Jan 2050</p>
-            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 text-center text-md-right">
-          <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-            <h4 class="mb-2">First Date</h4>
-            <p class="text-uppercase mb-2">01 Jan 2050</p>
-            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-          </div>
-        </div>
-        <div class="col-md-6 text-center text-md-left">
-          <%= image_tag 'story-2.jpg', class: 'img-fluid ml-md-3' %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6 text-center text-md-right">
-          <%= image_tag 'story-3.jpg', class: 'img-fluid mr-md-3' %>
-        </div>
-        <div class="col-md-6 text-center text-md-left">
-          <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
-            <h4 class="mb-2">Proposal</h4>
-            <p class="text-uppercase mb-2">01 Jan 2050</p>
-            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-          </div>
+      <% end %>
+    </div>
+
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+          <h4 class="mb-2">Ako sme sa spoznali...</h4>
+          <p class="m-0">
+            Náš príbeh začal dlhoročným priateľstvom, pokým si Miško v roku 2014 na Pohode neuvedomil,
+            že mu niečo chýba. Tentokrát to neboli tenisky... ani Vavro s Pačmim.
+            A tak mi v deň mojich narodenín, 13.07.2014, zorganizoval vysnený narodeninový deň.
+            Od tej chvíle kráčame ruka v ruke životom, spolu s našimi dvoma štvornohými zlatíčkami.
+            Prešli sme si za ten čas mnohými skúškami, a tak sme sa rozhodli povedať si svoje áno navždy v
+            prítomnosti našich najbližších.
+          </p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 text-center text-md-right">
-          <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 mr-md-3">
-            <h4 class="mb-2">Enagagement</h4>
-            <p class="text-uppercase mb-2">01 Jan 2050</p>
-            <p class="m-0">Lorem elitr magna stet rebum dolores sed. Est stet labore est lorem lorem at amet sea, eos tempor rebum, labore amet ipsum sea lorem, stet rebum eirmod amet. Kasd clita kasd stet amet est dolor elitr.</p>
-          </div>
-        </div>
-        <div class="col-md-6 text-center text-md-left">
-          <%= image_tag 'story-4', class: 'img-fluid ml-md-3' %>
-        </div>
-      </div>
+      <div class="col-md-3"></div>
     </div>
   </div>
 </div>
