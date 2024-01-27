@@ -78,3 +78,4 @@ gem 'jquery-ui-rails'
 gem "sassc-rails"
 gem 'bcrypt', '~> 3.1.7'
 gem "devise", "~> 4.9"
+gem "font-awesome-sass", "~> 6.5.1"
