@@ -12,3 +12,4 @@ Rails.application.config.assets.version = "1.0"
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 Rails.application.config.assets.precompile += %w( jquery.min.js jquery_ujs.js jquery-ui.min.js )
+Rails.application.config.assets.precompile += %w( waypoints.min.js owl.carousel.js main.js jquery_ui.js isotope.pkgd.min.js easing.min.js )
