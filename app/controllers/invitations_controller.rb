@@ -16,6 +16,6 @@ class InvitationsController < ApplicationController
   end
 
   def whitelisted_params
-    params.require(:invitation).permit(:accepted, :overnight)
+    params.require(:invitation).permit(:accepted, :overnight, :nr_persons, :with_children, :note)
   end
 end

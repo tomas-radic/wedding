@@ -17,6 +17,7 @@
             <%= f.label :overnight, 'Prespí', for: "invitation-overnight-#{invitation.id}" %>
           </span>
         </div>
+
         <div>
           <%= link_to 'Zmazať', manager_invitation_path(invitation),
               data: {
@@ -25,10 +26,33 @@
               } %>
         </div>
       </div>
+
+      <div class="mb-2">
+        <div class="mb-2">
+          <div>Celkový počet ľudí (vrátane detí)</div>
+          <% (1..4).each do |val| %>
+            <div class="form-check form-check-inline">
+              <%= f.radio_button :nr_persons, val, class: 'form-check-input' %>
+              <%= f.label :nr_persons, "#{val}", class: 'form-check-label' %>
+            </div>
+          <% end %>
+        </div>
+
+        <div class="mb-2">
+          <%= f.check_box :with_children, id: "invitation-with-children-#{invitation.id}" %>
+          <%= f.label :with_children, 'Prídu aj deti', for: "invitation-with-children-#{invitation.id}" %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label :note, 'Špeciálne požiadavky (napr. strava/diéta)', for: "invitation-note-#{invitation.id}" %>
+          <%= f.text_area :note, id: "invitation-note-#{invitation.id}", class: 'form-control' %>
+        </div>
+      </div>
+
       <div>
         <%= link_to 'link pre hosťa', edit_invitation_path(invitation), target: :_blank %>
         |
-        <%= I18n.l(invitation.updated_at, format: :short) %>
+        posl. aktualiz. <%= I18n.l(invitation.updated_at, format: :short) %>
       </div>
       <div class="text-right">
         <%= f.submit 'Uložiť' %>

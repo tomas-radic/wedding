@@ -3,19 +3,7 @@
     <h2 class="invitation-form__header"><%= @invitation.name %></h2>
 
     <%= form_with model: @invitation do |f| %>
-      <div>
-        <%= f.check_box :accepted,
-                        data: {
-                          invitations_target: 'accepted',
-                          action: 'change->invitations#acceptedChanged'
-                        } %>
-        <%= f.label :accepted, 'Prídem!' %>
-      </div>
-
-      <div>
-        <%= f.check_box :overnight, data: { invitations_target: 'overnight' } %>
-        <%= f.label :overnight, 'A aj prespím!' %>
-      </div>
+      <%= render 'invitations/fields', form: f %>
 
       <div class="invitation-form__footer d-flex justify-content-center">
         <%#= link_to root_path, class: 'btn btn-outline-primary font-weight-bold m-1 py-2 px-4' do %>

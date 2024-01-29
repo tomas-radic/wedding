@@ -1,0 +1,33 @@
+<div>
+  <%= form.check_box :accepted,
+                  data: {
+                    invitations_target: 'accepted',
+                    action: 'change->invitations#acceptedChanged'
+                  } %>
+  <%= form.label :accepted, 'Prídem!' %>
+</div>
+
+<div class="mb-2">
+  <%= form.check_box :overnight, data: { invitations_target: 'overnight' } %>
+  <%= form.label :overnight, 'A aj prespím!' %>
+</div>
+
+<div class="mb-2">
+  <div>Koľko nás príde (vrátane mňa, príp detí)</div>
+  <% (1..4).each do |val| %>
+    <div class="form-check form-check-inline">
+      <%= form.radio_button :nr_persons, val, class: 'form-check-input' %>
+      <%= form.label :nr_persons, "#{val}", class: 'form-check-label' %>
+    </div>
+  <% end %>
+</div>
+
+<div class="mb-2">
+  <%= form.check_box :with_children %>
+  <%= form.label :with_children, 'Prídu s nami deti' %>
+</div>
+
+<div class="form-group mb-2">
+  <%= form.label :note, 'Špeciálne požiadavky (napr. strava/diéta)', for: 'note' %>
+  <%= form.text_area :note, id: 'note', class: 'form-control', rows: 8 %>
+</div>

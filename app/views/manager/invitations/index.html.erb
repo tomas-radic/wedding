@@ -9,16 +9,8 @@
             <%= f.label :name, 'Meno na pozvánke' %>
             <%= f.text_field :name, class: 'form-control' %>
           </div>
-          <span class="mr-2">
-              <%= f.check_box :accepted %>
-            <%= f.label :accepted, 'Príde' %>
-            </span>
-          <span class="mr-2">
-              <%= f.check_box :overnight %>
-            <%= f.label :overnight, 'Prespí' %>
-          </span>
           <div class="text-right">
-            <%= f.submit 'Uložiť' %>
+            <%= f.submit 'Vytvoriť' %>
           </div>
         <% end %>
       </div>

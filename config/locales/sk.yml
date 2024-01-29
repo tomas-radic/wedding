@@ -1,0 +1,10 @@
+sk:
+  home:
+    event:
+      guests:
+        zero: Tu bude o chvíľu zoznam pozvaných hostí.
+        one: Máme pozvaného prvého hosťa!
+        other: V tejto chvíli máme pozvaných %{count} hostí!
+  time:
+    formats:
+      short: "%d.%-m.%Y %H:%M"
