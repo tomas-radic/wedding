@@ -1,8 +1,14 @@
 <div class="col-md-6 text-center text-md-<%= align %>">
-<!--  <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">-->
-  <div class="h-100 d-flex flex-column justify-content-center p-4 ml-md-3">
-    <h4 class="mb-2"><%= heading %></h4>
-    <p class="text-uppercase mb-2"><%= date %></p>
-    <p class="m-0"><%= text %></p>
+  <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4 ml-md-3">
+<!--  <div class="h-100 d-flex flex-column justify-content-center p-4 ml-md-3">-->
+    <% if heading.present? %>
+      <h4 class="mb-2"><%= heading %></h4>
+    <% end %>
+    <% if date.present? %>
+      <p class="text-uppercase mb-2"><%= date %></p>
+    <% end %>
+    <% if text.present? %>
+      <p class="m-0"><%= text %></p>
+    <% end %>
   </div>
 </div>

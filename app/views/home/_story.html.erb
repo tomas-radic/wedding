@@ -6,13 +6,21 @@
       <i class="far fa-heart text-dark"></i>
     </div>
     <div class="container timeline position-relative p-0">
-      <% 8.times do |i| %>
+      <% [
+           { heading: 'Prvé rande', year: '2014' },
+           { heading: 'Prvý výlet', year: '2015' },
+           { heading: 'Prvé bývanie', year: '2015' },
+           { heading: 'Prvý spoločník', year: '2015' },
+           { heading: 'Prvá svadba', year: '2016' },
+           { heading: 'Prvá dovolenka', year: '2017' },
+           { heading: 'Prvý domov', year: '2017' }
+         ].each.with_index do |data, i| %>
         <div class="row">
           <%= render 'home/story_row',
                      order: i,
                      path: "section3/v2/#{i + 1}.jpg",
-                     heading: '',
-                     date: '',
+                     heading: data[:heading],
+                     date: data[:year],
                      text: '' %>
         </div>
       <% end %>
