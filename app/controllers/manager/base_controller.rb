@@ -7,6 +7,6 @@ class Manager::BaseController < ApplicationController
   private
 
   def verify_manager!
-    head :unauthorized unless current_user.is_manager?
+    redirect_to root_path unless current_user.is_manager?
   end
 end

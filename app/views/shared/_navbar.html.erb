@@ -20,6 +20,9 @@
 <!--      <a href="#family" class="nav-item nav-link">Family</a>-->
 <!--      <a href="#rsvp" class="nav-item nav-link">RSVP</a>-->
       <a href="#contact" class="nav-item nav-link">Kontakt</a>
+      <% if current_user&.is_manager? %>
+        <%= link_to 'Pozvánky', manager_invitations_path, class: 'nav-item nav-link' %>
+      <% end %>
     </div>
   </div>
 </nav>
