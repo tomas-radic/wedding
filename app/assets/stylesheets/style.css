@@ -9453,7 +9453,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 /********** Template CSS ************/
 .font-secondary {
-  font-family: 'Great Vibes', cursive;
+  /*font-family: 'Great Vibes', cursive;*/
+  font-family: 'Dancing Script', cursive;
 }
 
 .btn-square {
