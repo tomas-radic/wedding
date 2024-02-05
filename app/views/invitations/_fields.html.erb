@@ -28,6 +28,11 @@
 </div>
 
 <div class="form-group mb-2">
+  <%= form.label :email, 'Email', for: 'email' %>
+  <%= form.email_field :email, id: 'email', class: 'form-control' %>
+</div>
+
+<div class="form-group mb-2">
   <%= form.label :note, 'Špeciálne požiadavky (napr. strava/diéta)', for: 'note' %>
   <%= form.text_area :note, id: 'note', class: 'form-control', rows: 8 %>
 </div>

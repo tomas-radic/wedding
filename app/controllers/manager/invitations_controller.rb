@@ -22,7 +22,7 @@ class Manager::InvitationsController < Manager::BaseController
   private
 
   def whitelisted_params
-    params.require(:invitation).permit(:name, :accepted, :overnight, :nr_persons, :with_children, :note)
+    params.require(:invitation).permit(:name, :accepted, :overnight, :nr_persons, :with_children, :email, :note)
   end
 
   def load_invitation

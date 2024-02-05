@@ -44,6 +44,11 @@
         </div>
 
         <div class="form-group">
+          <%= f.label :email, 'Email', for: "invitation-email-#{invitation.id}" %>
+          <%= f.email_field :email, id: "invitation-email-#{invitation.id}", class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
           <%= f.label :note, 'Špeciálne požiadavky (napr. strava/diéta)', for: "invitation-note-#{invitation.id}" %>
           <%= f.text_area :note, id: "invitation-note-#{invitation.id}", class: 'form-control' %>
         </div>
